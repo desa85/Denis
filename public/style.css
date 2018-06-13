@@ -1,0 +1,93 @@
+body{
+	background-color: #111111;
+}
+#list{
+	width: 20%;
+	float: left;
+	height: 700px;
+	overflow: auto;
+}
+#content{
+	width: 78%;
+	float: left;
+	height: 700px;
+	border-left: solid 2px #ff9a9a;
+
+}
+.contentHead{
+	font-size: 40px;
+	width: 100%;
+	display: block;
+	outline:none;
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	color: #dddddd;
+	margin-left: 20px;
+}
+.contentText{
+	font-size: 15px;
+	width: 100%;
+	outline:none;
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	display: block;
+	height: 500px;
+	color: #dddddd;
+	margin-left: 20px;
+}
+#search input{
+	width: 60%;
+	height: 25px;
+	margin-left: 10%;
+	margin-top: 10px;
+	outline:none;
+	background-color: #202020;
+	border: none;
+	border-bottom: solid 2px #ff9a9a;
+	color:  #dddddd;
+	font-family: 'PT Sans', sans-serif;
+}
+#search button{
+	width: 25px;
+	height: 25px;
+	margin-left: 10px;
+	margin-top: 10px;
+	background-color: #555555;
+}
+#addnote button{
+		color: #ff9a9a;
+		width:50px;
+		height: 50px;
+		margin: 15px;
+		margin-left: 40%;
+		border-radius:50px;
+		border: none;
+		font-size: 20px;
+		outline:none;
+		border: solid 2px #ff9a9a;
+		background-color: rgba(0, 0, 0, 0);
+}
+#addnote button:hover{
+	background-color: rgba(225, 225, 225, 0.1);
+}
+.note{
+	overflow: hidden;
+	height: 50px;
+	margin-bottom: 15px;
+	border-left: solid 2px #ff9a9a;
+	color: #dddddd;
+	padding: 5px;
+	font-family: 'PT Sans', sans-serif;
+}
+.note div{
+	margin-bottom: 10px;
+}
+.note .head{
+	margin-bottom: 5px;
+	font-size: 20px;
+	font-weight:bold;
+	font-family: 'PT Sans', sans-serif;
+}
+.note:hover{
+	background-color: rgba(225, 225, 225, 0.1);
+}

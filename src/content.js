@@ -1,15 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 class Content extends React.Component{
-	costructor(props){
-		
+	constructor(props){
+		super()
 	}
 	render(){
 
 	
 		return (
-			<div>
-				content
+			<div id = "content">
+				<input className = "contentHead" type = "text" value = {this.props.data.data.head} onChange = {this.props.changeHead} />
+				<textarea className = "contentText"  value = {this.props.data.data.text} onChange = {this.props.changeText} />
 			</div>
 		)
 }
