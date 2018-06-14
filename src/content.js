@@ -5,7 +5,7 @@ class Content extends React.Component{
 	}
 	render(){
 
-	
+	//тут содержится контент
 		return (
 			<div id = "content">
 				<input className = "contentHead" type = "text" value = {this.props.data.data.head} onChange = {this.props.changeHead} />
