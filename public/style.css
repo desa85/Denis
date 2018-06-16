@@ -1,22 +1,48 @@
+*{
+	padding: 0;
+	margin: 0;
+}
 body{
 	background-color: #111111;
+	overflow-y:hidden;
+}
+#app{
+	overflow-y:hidden;
+	width: 100%;
 }
 #list{
 	width: 20%;
 	float: left;
 	height: 700px;
 	overflow: auto;
+	border-right: solid 2px #ff9a9a;
+	left: 0px;
+	transition-property: left;
+	transition-duration: 0.3s;
+
+}
+#list-visible{
+	width: 20%;
+	float: left;
+	height: 700px;
+	overflow: auto;
+	border-right: solid 2px #ff9a9a;
+	left: 0px;
+	transition-property: left;
+	transition-duration: 0.3s;
+
 }
 #content{
 	width: 78%;
 	float: left;
 	height: 700px;
-	border-left: solid 2px #ff9a9a;
+	margin: 0px;
+	
 
 }
 .contentHead{
 	font-size: 40px;
-	width: 100%;
+	width: 90%;
 	display: block;
 	outline:none;
 	border: none;
@@ -26,13 +52,14 @@ body{
 }
 .contentText{
 	font-size: 15px;
-	width: 100%;
+	width: 90%;
 	outline:none;
 	border: none;
 	background-color: rgba(0, 0, 0, 0);
 	display: block;
 	height: 500px;
 	color: #dddddd;
+	margin: 0;
 	margin-left: 20px;
 }
 #search input{
@@ -66,6 +93,7 @@ body{
 		outline:none;
 		border: solid 2px #ff9a9a;
 		background-color: rgba(0, 0, 0, 0);
+		
 }
 #addnote button:hover{
 	background-color: rgba(225, 225, 225, 0.1);
@@ -97,4 +125,16 @@ body{
 ::-webkit-scrollbar-thumb{
     background-color: #ff9a9a;
 
+}
+@media screen and (max-width: 700px){
+	#list {
+		position: absolute;
+		left: -700px;
+		width: 100%;	
+	}
+	#list-visible{
+		position: absolute;
+		left: 0px;
+		width: 100%;
+	}
 }

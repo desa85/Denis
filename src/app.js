@@ -5,7 +5,8 @@ class note {
 	constructor(head, text, key){
 		this.head = head;
 		this.text = text;
-		this.key = key}
+		this.key = key,
+		this.state = {visible: false}}
 }
 class App extends React.Component{
 	
@@ -31,6 +32,9 @@ class App extends React.Component{
 				key: 2
 			}] 
 		}
+	}
+	toggle = () => {
+		this.setState({visible: !this.state.visible})
 	}
 	changeinfo = (head, text, key) => {
 		this.setState({
@@ -68,9 +72,9 @@ class App extends React.Component{
 		
 		return (
 
-			<div>
-				<List data = {this.state.data} changeinfo = {this.changeinfo} notelist = {this.state.notelist} addnote = {this.addnote} />
-				<Content data = {this.state} changeHead = {this.changeHead}  changeText = {this.changeText} />
+			<div id = "app">
+				<List data = {this.state.data} changeinfo = {this.changeinfo} notelist = {this.state.notelist} addnote = {this.addnote} visible = {this.state.visible} fun = {this.toggle} />
+				<Content data = {this.state} changeHead = {this.changeHead}  changeText = {this.changeText} visible = {this.toggle} />
 			</div>
 		)
 	}
